@@ -42,8 +42,6 @@ object GroupTop3 {
       top3+=(max,second,third)
       Tuple2(cname,top3)
     })
-    RDD
-    org.apache.spark.deploy.worker.Worker
     sortedScores.foreach(sortedScore=>println(sortedScore._1+":"+sortedScore._2.mkString(" ")))
   }
 

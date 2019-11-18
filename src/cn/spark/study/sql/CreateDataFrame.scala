@@ -1,6 +1,6 @@
 package cn.spark.study.sql
 
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.{SQLContext, SparkSession}
 
 object CreateDataFrame {
 
@@ -8,5 +8,7 @@ object CreateDataFrame {
     val spark = SparkSession.builder().appName("CreateDataFrame").getOrCreate()
     val df = spark.read.json("src/students.json")
     df.show()
+
+    SQLContext
   }
 }
